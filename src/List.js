@@ -4,7 +4,8 @@ import { Item } from "./Item";
 import { useFetch } from './useFetch';
 import { useSelector } from 'react-redux';
 
-const API = 'https://api.unsplash.com/photos/?client_id=ct-Vx5X8qwFdDdFfjz6SPLflHa3KYjNwFwYYQru7_sI';
+const query = 'london';
+const API = `https://api.unsplash.com/search/photos?query=${query}&client_id=ct-Vx5X8qwFdDdFfjz6SPLflHa3KYjNwFwYYQru7_sI`;
 
 export const List = ({navigation}) => {
 

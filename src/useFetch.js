@@ -9,11 +9,10 @@ export  const useFetch = (url) => {
 
     useEffect(() => {
         async function fetchData(){
-          console.log('STARTED')
           let response = await fetch(url)
           let data = await response.json()
 
-          const dispatching = () => dispatch(fetching(data))
+          const dispatching = () => dispatch(fetching(data.results))
           dispatching()
         }
         fetchData();
